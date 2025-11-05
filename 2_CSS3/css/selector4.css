@@ -1,0 +1,58 @@
+/*일반구조 선택자*/
+/*
+:first-child
+형제 관계의 요소 중 첫번째 요소
+
+#test1인 요소의 자식 요소 중
+형제관계에서 첫번째 요소가 p 태그인가?
+=>맞음
+첫번째 형제요소는 p태그여서 스타일 적용됨
+*/
+
+#test1 > p:first-child {
+ background-color: red;
+ color: white;
+}
+
+/*
+:last-child
+형제 관계의 요소 중 마지막 요소
+
+#test1인 요소의 자식 요소 중
+형제관계 중 마지막 요소가 p 태그인가?
+=>아님
+마지막 요소는 pre태그여서 스타일 적용안됨
+*/
+
+#test1 > p:last-child {
+ background-color: orange;
+}
+
+/*
+:nth-child(수열)
+형제관계  요소 중 지정된 수열번째 요소를 모두 선택
+-순서 따질때 1부터 시작
+
+#test1인 요소의 자식 요소 중
+형제관계 중 마지막 요소가 p 태그인가?
+=>아님
+마지막 요소는 pre태그여서 스타일 적용안됨
+*/
+#test1 > p:nth-child(2) {
+ background-color: yellow;
+}
+
+#test1 > p:nth-child(4) {
+ background-color: green;
+}
+
+/*형태구조선택자*/
+/*
+:first-of-type
+같이 선택된 형제들 중에서 첫번째 요소
+*/
+
+/*p 태그 중에서 마지막 요소 선택*/
+#test2 > p:last-of-type {
+  background-color: skyblue;
+}

@@ -1,0 +1,72 @@
+div {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.container-1 {
+  border: 2px dashed red;
+  position: relative;
+}
+
+.first {
+  width: 300px;
+  height: 300px;
+  background-color: yellow;
+}
+
+.second {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.third {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute; /* 부모기준 */
+  top: 100px;
+  left: 100px;
+}
+
+.container-2 {
+  width: 300px;
+  height: 300px;
+  position: relative; /* 기준점, 부모에게 줘야함 */
+}
+
+#center {
+  width: 50px;
+  height: 50px;
+  background-color: pink;
+  
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+.fixed-area {
+  width: 120px;
+  background-color: yellow;
+  color: white;
+
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+.fixed-area > a { /*방문안함*/
+  text-decoration: none;
+  color: black;
+}
+
+.fixed-area > a:visited { /*방문한 적이 있는 링크시*/
+  color: red;
+}

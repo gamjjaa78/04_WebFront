@@ -67,8 +67,8 @@ header > section:nth-of-type(2) {
 }
 
 nav {
- height: 50px;
- border-bottom: 2px solid black; 
+  height: 50px;
+  border-bottom: 2px solid black; 
 }
 
 nav > ul {
@@ -145,7 +145,7 @@ nav a:hover {
 .content-item p {
   display: -webkit-box;
   /* 웹킷 전용 플렉스 박스로 형태를 출력하겠음둥
-   ==줄 수 제한 기능을 위한 준비
+  ==줄 수 제한 기능을 위한 준비
    */
 
     -webkit-line-clamp: 3;
@@ -157,3 +157,4 @@ nav a:hover {
     overflow: hidden;
     /* 3줄 이후 텍스트는 화면에서 보이지 않게 숨기겠다 */
 }
+

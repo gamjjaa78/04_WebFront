@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'GowoonDodum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: 'GowoonDodum';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header, main, footer {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background: #244c80;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header nav > ul {
+  display: flex;
+  list-style: none;
+  gap: 3ch;
+}
+
+header nav li {
+  flex-basis: 150px;
+}
+
+header nav a {
+
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  height: 50px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+
+header nav a:hover {
+  background-color: #a4d4eb;
+}
+
+footer {
+  background-color: #f7eb4e;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+footer .contact-me button {
+  display: block;
+  margin: 20px auto 0;
+  cursor: pointer;
+}
+
+#thanks1, #thanks2 {
+  width: 50px;
+}
+
+header nav {
+  margin-left: auto;
+}
+
+main {
+  background: #a4d4eb;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#profil {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.myself h2 {
+  margin: 2px 0;
+}
+
+.education {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.education > h3{
+  flex-basis: 100%;
+}
+
+.table_class {
+  display: flex;
+  gap: 50px;
+}

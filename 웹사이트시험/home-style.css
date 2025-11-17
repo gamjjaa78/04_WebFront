@@ -104,3 +104,19 @@ main {
   margin: 2px 0;
 }
 
+<<<<<<< HEAD
+=======
+.education {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.education > h3{
+  flex-basis: 100%;
+}
+
+.table_class {
+  display: flex;
+  gap: 50px;
+}
+>>>>>>> ca50f5d4afb218a39ba498892e8732e59ddb702e

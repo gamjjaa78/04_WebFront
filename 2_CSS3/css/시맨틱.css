@@ -62,7 +62,7 @@ header > section:nth-of-type(2) {
 #search-btn {
   flex-basis: 8%;
   cursor: pointer;
-  font-size: 20px; /*돋보기가 폰트로 인식됨*/
+  font-size: 20px;
   border: 0;
   background-color: transparent;
   /* transparent 배경색 투명*/
@@ -74,9 +74,13 @@ nav {
   border-bottom: 2px solid black;
 
   position: sticky;
-  /*sticky : 특정 스크롤 위치에 도달했을때 요소가 고정되는 효과
-  top, bottom, left, right 속성이 필수로 같이 작성돼야함
-  ->임계점 도달시 어느 위치에 부착할지 정해야기 때문*/
+  /* sticky: 특정 스크롤 위치에 도달했을 때
+  요소가 고정되는 효과를 주는데 사용함.
+  top, bottom, left, right 속성이 필수로 
+  같이 작성되어야 함.
+  -> 임계점 도달 시 어느 위치에 부착할지 
+  정해야하기 때문
+  */
   top: 0;
   background-color: white;
 }
@@ -170,6 +174,7 @@ nav a:hover {
   overflow: hidden;
   /* 3줄 이후의 텍스트는 화면에서 보이지 않게 숨기기*/
 }
+
 form[name="login-form"] {
   height: 130px;
   margin-top: 20px;
@@ -180,19 +185,21 @@ form[name="login-form"] {
 
 #id-pw-area {
   flex-basis: 70%;
+
   display: flex;
   margin: 0;
   padding: 0;
   border: 1px solid #ddd;
 }
 
-#id-pw-area > section:first-child{
+#id-pw-area > section:first-child {
   flex-basis: 75%;
+
   display: flex;
   flex-direction: column;
 }
 
-#id-pw-area > section:last-child{
+#id-pw-area > section:last-child {
   flex-basis: 25%;
 }
 
@@ -217,8 +224,8 @@ form[name="login-form"] {
 }
 
 #id-pw-area button:hover{
-background-color: #455ba8;
-color: white;
+  background-color: #455ba8;
+  color: white;
 }
 
 #id-pw-area input:focus {
@@ -231,14 +238,14 @@ form[name="login-form"] > label {
   font-size: 14px;
 }
 
-#singup-find-area {
+#signup-find-area {
   margin-left: 10px;
 }
 
-#singup-find-area > a {
+#signup-find-area > a {
   color: black;
   font-size: 14px;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 #signup-find-area > span {
@@ -271,26 +278,32 @@ footer span {
   padding: 0 10px;
 }
 
-/* 미디어 쿼리 (Media Query)
-@media
-미디어쿼리를 선언하는 키워드, 특정 조건(화면크기)에 따라 css 스타일을 적용할때 사용
+/*
+미디어 쿼리(Media Query)
 
-all
-미디어 유형을 나타내는 부분
-->모든 미디어 유형에 적용됨, 생략가능, 보통 screen을 많이 사용함
+@media 
+미디어쿼리를 선언하는 키워드로,
+특정 조건(화면 크기)에 따라 CSS 스타일을
+적용할 때 사용
+
+all 
+미디어 유형을 나타내는 부분.
+-> 모든 미디어 유형에 적용된다.
+생략가능, 보통 screen 을 많이 사용함
 
 (max-width: 767px) : 반응형 모바일 기준
-기기의 화면 너비가 767px 이해일때 해당 스타일 적용함
+기기의 화면 너비가 767px 이하일 때 
+해당 스타일을 적용함.
 스마트폰, 작은 태블릿 등 작은 화면에서 적용하는 크기
 */
 
-/* 모바일 : 화면너비가 767px 이하일떄 */
+/* 모바일 : 화면너비가 767px 이하일때*/
 @media all and (max-width: 767px) {
   main {
     width: 100vw;
-    /* vw:viewport width 약자
-          현재 뷰포트의 100%만큼 너비차지
-     */      
+    /* vw : viewport width 약자 
+      현재 뷰포트의 100%만큼 너비 차지
+    */
   }
 
   header {
@@ -316,20 +329,22 @@ all
     flex-direction: column;
   }
 
-  .content-2{
+  .content-2 {
     padding: 20px;
   }
 
-  footer p,
-  footer > section * {
+  footer p, 
+  footer > section > * {
     font-size: 12px;
-  } 
+  }
 }
 
-/* 태블릿:768~1023px 범위 */
+/* 태블릿 : 768 ~ 1023 px 범위*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+
 }
 
-/* PC:너비가 1024px 이상일때 */
+/* PC : 너비가 1024px 이상일 때 */
 @media (min-width: 1024px) {
+  
 }

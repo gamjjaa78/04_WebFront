@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI 구현</title>
+
+    <style>
+        #text {
+            width: 350px;
+            height: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+  <b>너비 : </b> <input type="text" id="width"> px &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>높이 : </b> <input type="text" id="height"> px <br> <br>
+
+  <b>글자크기 : </b> <input type="text" id="fontsize"> px &nbsp;
+
+  <span id="fontWeight">
+    <b>굵기 : </b> 보통 <input type="radio" name="fw" value="normal">
+                  굵게  <input type="radio" name="fw" value="bold">
+  </span> <br> <br>
+
+  <b>글자색 : </b> <input type="text" id="color"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>배경색 : </b> <input type="text" id="backColor"> <br> <br>
+
+  <div id="alignRow">
+    <b>가로정렬 : </b> 왼쪽 <input type="radio" name="ar" value="flex-start">
+                      가운데 <input type="radio" name="ar" value="center">
+                      오른쪽 <input type="radio" name="ar" value="flex-end">
+  </div> <br>
+
+  <div id="alignCol">
+    <b>세로정렬 : </b> 위 <input type="radio" name="ac" value="flex-start">
+                      가운데 <input type="radio" name="ac" value="center">
+                      아래 <input type="radio" name="ac" value="flex-end">
+  </div> <br>
+
+  <b>출력 문자열:</b>  <textarea id="text" style="resize: none;"></textarea> <br><br>
+  <button id="registration">등록</button>
+  <div id="result"></div>
+
+<script>
+const registration = document.getElementById("registration");
+
+registration.addEventListener("click", () => {
+    const width = document.getElementById("width").value;
+    const height = document.getElementById("height").value;
+    const fontsize = document.getElementById("fontsize").value;
+    const color = document.getElementById("color").value;
+    const backColor = document.getElementById("backColor").value;
+    const text = document.getElementById("text").value;
+
+    // ★ 라디오 버튼 선택값 가져오기
+    const fontWeight = document.querySelector("input[name='fw']:checked")?.value || "normal";
+    const alignRow = document.querySelector("input[name='ar']:checked")?.value || "flex-start";
+    const alignCol = document.querySelector("input[name='ac']:checked")?.value || "flex-start";
+
+    const p = document.createElement("p");
+    p.innerText = text;
+
+    p.style.width = width + "px";
+    p.style.height = height + "px";
+    p.style.fontSize = fontsize + "px";
+    p.style.fontWeight = fontWeight;
+
+    p.style.color = color;
+    p.style.backgroundColor = backColor;
+
+    p.style.display = "flex";
+    p.style.justifyContent = alignRow;
+    p.style.alignItems = alignCol;
+
+    document.getElementById("result").append(p);
+});
+</script>
+
+</body>
+</html>
